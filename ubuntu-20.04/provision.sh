@@ -51,7 +51,7 @@ circleci-install scala 1.5.5
 circleci-install snap
 
 # Docker have be last - to utilize cache better
-circleci-install docker 5:20.10.7~3-0~ubuntu-focal 1.4.3-1
+circleci-install docker 5:20.10.17~3-0~ubuntu-focal 1.4.3-1
 circleci-install docker_compose 1.29.2
 
 circleci-install socat
