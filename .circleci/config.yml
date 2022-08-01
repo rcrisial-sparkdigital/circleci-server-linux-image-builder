@@ -195,21 +195,21 @@ workflows:
 
   build_all_images:
     jobs:
-      - ubuntu-20.04_gcp:
-          context: circleci-server-image-builder
+#      - ubuntu-20.04_gcp:
+#          context: circleci-server-image-builder
       - ubuntu-20.04_aws:
           context: circleci-server-image-builder
 
-  daily:
-    jobs:
-      - gc_old_gce_instances:
-          context: circleci-server-image-builder
-      - gc_old_ec2_instances:
-          context: circleci-server-image-builder
-    triggers:
-      - schedule:
-          cron: "17 12 * * *"
-          filters:
-            branches:
-              only:
-                - master
+#  daily:
+#    jobs:
+#      - gc_old_gce_instances:
+#          context: circleci-server-image-builder
+#      - gc_old_ec2_instances:
+#          context: circleci-server-image-builder
+#    triggers:
+#      - schedule:
+#          cron: "17 12 * * *"
+#          filters:
+#            branches:
+#              only:
+#                - master
